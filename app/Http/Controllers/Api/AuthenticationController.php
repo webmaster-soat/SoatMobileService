@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Responses\ApiSuccessResponse;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,12 +44,11 @@ class AuthenticationController extends Controller
         ];
 
         if (Auth::attempt($credentials)) {
-            $token = Auth::user()->createToken('passportToken')->accessToken;
+            $token = Auth::user()->createToken('passportToken');
 
-            return response()->json([
-                'user' => Auth::user(),
-                'token' => $token
-            ], 200);
+            return  new ApiSuccessResponse(
+                ['access_token' => $token->accessToken, 'expires_at' => $token->token->expires_at]
+            );
         }
 
         return response()->json([

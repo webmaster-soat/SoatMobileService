@@ -2,10 +2,9 @@
 
 namespace App\Exceptions;
 
-use App\Http\Responses\ResponseInterface;
+use App\Http\Interfaces\ResponseInterface;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Validation\ValidationException;
-use Inertia\Inertia;
 use Throwable;
 
 class Handler extends ExceptionHandler
