@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "564049fb9d9b3e427e45c57b75b7a02f",
+    "content-hash": "ba0a82bb6f4f5cf108e936f3bd453343",
     "packages": [
         {
             "name": "brick/math",
@@ -3171,6 +3171,41 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "peterpetrus/passport-token",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/peterpetrus/passport-token.git",
+                "reference": "ffb8e5c9e91e389b399ad8be30262550b32793d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/peterpetrus/passport-token/zipball/ffb8e5c9e91e389b399ad8be30262550b32793d6",
+                "reference": "ffb8e5c9e91e389b399ad8be30262550b32793d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^5.3.3 || ^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Decoder for Laravel Passport (Bearer) Access Token",
+            "support": {
+                "issues": "https://github.com/peterpetrus/passport-token/issues",
+                "source": "https://github.com/peterpetrus/passport-token/tree/0.1"
+            },
+            "time": "2023-09-25T15:24:20+00:00"
         },
         {
             "name": "phpoption/phpoption",

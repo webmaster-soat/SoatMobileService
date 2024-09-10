@@ -30,10 +30,11 @@ class AuthenticationController extends Controller
 
         $user = User::create($formData);
 
-        return response()->json([
-            'user' => $user,
-            'token' => $user->createToken('passportToken')->accessToken
-        ], 200);
+        $token = $user->createToken('passportToken');
+
+        return  new ApiSuccessResponse(
+            ['access_token' => $token->accessToken, 'expires_at' => $token->token->expires_at]
+        );
     }
 
     public function login(Request $request)
